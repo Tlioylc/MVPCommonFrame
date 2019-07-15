@@ -1,8 +1,18 @@
 <resources>
-    <string name="app_name">com.livelihood.client</string>
+    <string name="app_name">TEST</string>
+
+    <string name="login_title">登录</string>
+    <string name="login_select_to_pwd_login">手机密码登录</string>
+    <string name="login_select_to_code_login">验证码登录</string>
+    <string name="login_phone_login_hint">请输入手机号</string>
+    <string name="login_phone_login_code_hint">验证码</string>
+    <string name="login_phone_login_pwd_hint">输入密码</string>
+    <string name="login_phone_login_get_code">获取验证码</string>
+    <string name="login_other_login_type">其他登录方式</string>
+
+
 
     <string name="server_error_toast">服务器走失，请恢复后重试</string>
     <string name="net_error_toast">网络异常，请检查后重试</string>
-
     <string name="web_activity_net_error_text">喂，110嘛，这里有个页面联系不到啦！</string>
 </resources>

@@ -13,4 +13,31 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:clickable">true</item>
     </style>
+
+    <style name="TextInputStyle" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!--<item name="colorAccent">#3498db</item> -->
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <style name="HintError" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/red_FF0D0D</item>
+    </style>
+
+
+    <style name="ImageTranslucentTheme" parent="AppTheme">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="DialogSys" parent="ImageTranslucentTheme">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+        <item name="android:windowHideAnimation">@null</item>
+        <item name="android:windowShowAnimation">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
 </resources>
