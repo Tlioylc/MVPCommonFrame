@@ -11,19 +11,20 @@ import android.view.View
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.tlioylc.client.R
-import com.tlioylc.client.module.bese.BaseActivity
+import com.tlioylc.client.module.base.BaseActivity
+import com.tlioylc.client.module.main.MainActivity
+import com.tlioylc.client.module.main.MainActivityBuilder
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity() {
 
-    var textWatcher : TextWatcher = object : TextWatcher{
+    private var textWatcher : TextWatcher = object : TextWatcher{
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            LogUtils.e("=======onTextChanged================")
-            var b : Boolean =  run{
-                var phone = _login_activity_phone_number.text.toString().trim()
-                var str = if(_login_activity_select_login_type.isSelected){
+            val b : Boolean =  run{
+                val phone = _login_activity_phone_number.text.toString().trim()
+                val str = if(_login_activity_select_login_type.isSelected){
                     _login_activity_pwd.text.toString().trim()
                 }else{
                     _login_activity_code.text.toString().trim()
@@ -49,7 +50,7 @@ class LoginActivity : BaseActivity() {
         setContentView(R.layout.activity_login)
         _login_title.paint.typeface = Typeface.DEFAULT_BOLD
 
-        var spannable : Spannable = Spannable.Factory.getInstance().newSpannable("点击登录即同意用户协议与隐私条款")
+        val spannable : Spannable = Spannable.Factory.getInstance().newSpannable("点击登录即同意用户协议与隐私条款")
         spannable.setSpan(object : ClickableSpan() {
             override fun onClick(widget: View?) {
                 ToastUtils.showShort("????")
@@ -72,16 +73,15 @@ class LoginActivity : BaseActivity() {
         _login_activity_code.addTextChangedListener(textWatcher)
         _login_activity_pwd.addTextChangedListener(textWatcher)
 
-//        (_login_activity_select_login_type.layoutParams as ConstraintLayout.LayoutParams).topMargin = BaseConfig.STATUS_BAR_SAFE_HEIGHT
 
         _phone_login_activity_confirm_login.setOnClickListener { login() }
     }
 
-    fun login(){
-        ToastUtils.showShort("？？？")
+    private fun login(){
+        MainActivityBuilder.init("登录成功").open(this)
     }
 
-    fun switchLoginType(){
+    private fun switchLoginType(){
         if(_login_activity_select_login_type.isSelected){
             _login_activity_select_login_type.isSelected = false
             _login_activity_code_ly.visibility = View.VISIBLE

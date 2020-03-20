@@ -3,7 +3,7 @@ package com.tlioylc.client.adapter
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
-import com.tlioylc.client.module.bese.BaseFragment
+import com.tlioylc.client.module.base.BaseFragment
 import java.util.*
 
 /**

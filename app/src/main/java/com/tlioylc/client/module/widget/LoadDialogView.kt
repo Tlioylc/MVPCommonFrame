@@ -43,11 +43,11 @@ object LoadDialogView {
         if (isGray) {
             grayLayout?.visibility = View.VISIBLE
             whiteLayout?.visibility = View.GONE
-            grayCircle?.setAnimation(operatingAnim)
+            grayCircle?.animation = operatingAnim
         } else {
             grayLayout?.visibility = View.GONE
             whiteLayout?.visibility = View.VISIBLE
-            whiteCircle?.setAnimation(operatingAnim)
+            whiteCircle?.animation = operatingAnim
         }
         val alertTextView  : TextView?= v?.findViewById(R.id.load_layout_text)
         if (!TextUtils.isEmpty(alertText)) {

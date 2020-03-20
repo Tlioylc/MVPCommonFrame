@@ -16,10 +16,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.tlioylc.client.R;
-import com.tlioylc.client.module.bese.BaseActivity;
+import com.tlioylc.client.module.base.BaseActivity;
 import com.tlioylc.client.module.widget.EmptyView;
 import com.tlioylc.client.module.widget.ProgressWebView;
-import com.tlioylc.client.module.widget.TransparentTitileBarView;
+import com.tlioylc.client.module.widget.TransparentTitleBarView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,7 +34,7 @@ import butterknife.ButterKnife;
 public class WebActivity extends BaseActivity {
 
     @BindView(R.id.web_activity_title)
-    TransparentTitileBarView title;
+    TransparentTitleBarView title;
     @BindView(R.id.web_activity_webview)
     ProgressWebView webview;
     @BindView(R.id.web_activity_empty_view)
@@ -114,8 +114,12 @@ public class WebActivity extends BaseActivity {
             }
 
         });
-        StringBuilder stringBuilder = new StringBuilder(webview.getSettings().getUserAgentString());
-        webview.getSettings().setUserAgentString(stringBuilder.append("/yb/").toString());
+        /**
+         * 如果需要设置agent
+         * StringBuilder stringBuilder = new StringBuilder(webview.getSettings().getUserAgentString());
+         * webview.getSettings().setUserAgentString(stringBuilder.append("/xxx/").toString());
+         */
+
 
         interfaceJSUtil = new InterfaceJSUtil(WebActivity.this);
         webview.addJavascriptInterface(interfaceJSUtil, "JavaBridgeInterface");

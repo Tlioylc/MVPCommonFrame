@@ -2,6 +2,9 @@ package com.tlioylc.client
 
 import android.app.Application
 import android.os.Build
+import com.tlioylc.openannotation.OpenActivityLifecycleCallback
+
+
 
 
 
@@ -23,6 +26,7 @@ class LihApplication : Application(){
         instance = this
         if(Build.VERSION.SDK_INT >= 28)
             closeAndroidPDialog()
+        registerActivityLifecycleCallbacks(OpenActivityLifecycleCallback())
     }
 
 

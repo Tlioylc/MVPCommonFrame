@@ -1,6 +1,5 @@
 package com.tlioylc.client.http;
 
-import android.os.Build;
 import android.text.TextUtils;
 
 import com.blankj.utilcode.util.AppUtils;
@@ -10,7 +9,7 @@ import com.ihsanbal.logging.LoggingInterceptor;
 import com.tlioylc.client.BuildConfig;
 import com.tlioylc.client.LihApplication;
 import com.tlioylc.client.local.SPKey;
-import com.tlioylc.client.module.bese.BaseConfig;
+import com.tlioylc.client.module.base.BaseConfig;
 //import com.umeng.analytics.AnalyticsConfig;
 
 import java.util.List;

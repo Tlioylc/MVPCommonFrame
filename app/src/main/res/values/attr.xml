@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TransparentTitleBar">
+        <attr name="left_img" format="reference"/>
+        <attr name="right_img" format="reference"/>
+        <attr name="right_text" format="string"/>
+        <attr name="right_text_color" format="color"/>
+        <attr name="right_image_click" format="string"/>
+        <attr name="left_image_click" format="string"/>
+        <attr name="right_text_click" format="string"/>
+        <attr name="title" format="string"/>
+        <attr name="title_size" format="dimension"/>
+        <attr name="title_bg" format="color"/>
+        <attr name="title_text_color" format="color"/>
+    </declare-styleable>
+
+</resources>

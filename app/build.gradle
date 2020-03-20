@@ -97,4 +97,9 @@ dependencies {
     api "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.jakewharton:disklrucache:2.0.2'
+
+    //快捷跳转注解
+    annotationProcessor files('libs/open-annotation-v1.0.3.jar')
+    kapt files('libs/open-annotation-v1.0.3.jar')
+    implementation files('libs/open-annotation-v1.0.3.jar')
 }
